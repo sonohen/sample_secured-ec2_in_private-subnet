@@ -17,6 +17,14 @@ cdk bootstrap
 cdk deploy
 ```
 
+## Connect EC2 via Systems Manager
+
+1. Open AWS Management Console
+2. Navigate to EC2, and find the EC2 instance to connect
+3. Click "Connect"
+4. Connect via Systems Manager
+5. You can see the console
+
 ## Destroy stack
 
 ```shell
