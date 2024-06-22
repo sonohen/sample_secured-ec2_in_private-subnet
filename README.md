@@ -1,14 +1,24 @@
-# Welcome to your CDK TypeScript project
+# Access EC2 instance in private subnet via Systems Manager
 
-This is a blank project for CDK development with TypeScript.
+In this sample script, I will show you how you can secure the EC2 instances which do not require in-bound connection. Please find the attached diagram for detail.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+![](/sample_secured-ec2_in_private-subnet.drawio.png)
 
-## Useful commands
+As I describe the diagram, there are no internet facing resources. This mean you can keep your environment secure without maintaining such 'complex' resources. And as for the resources, all resources except EC2 in this stack are AWS managed.
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+# How to run this script
+
+Before you run this script, you need to install `aws-cdk` and connection to AWS via CLI. For more information, see [AWS Cloud Development Kit (AWS CDK) v2](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html). You also need to set up the Node.js environment.
+
+## Deploy stack
+
+```shell
+cdk bootstrap
+cdk deploy
+```
+
+## Destroy stack
+
+```shell
+cdk destroy
+```
